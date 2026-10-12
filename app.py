@@ -6,8 +6,7 @@ import streamlit as st
 from google import genai
 
 APP_TITLE = "IndiaMART AI Title Studio"
-MODEL_NAME = "gemini-3.8-flash"
-
+MODEL_NAME = "gemini-2.5-flash-lite"
 SAMPLES = {
     "Stainless steel water bottle": {
         "product_name": "Mens gents Steel water bottle bottle 1 litre",
@@ -138,7 +137,7 @@ def generate_title(api_key, product_name, specifications, category):
         input=prompt,
         system_instruction=SYSTEM_INSTRUCTION,
         # Keep generation concise for lower latency.
-        generation_config={"max_output_tokens": 90, "thinking_level": "low"},
+        generation_config={"max_output_tokens": 60, "thinking_level": "minimal"},
     )
 
     text = (getattr(response, "output_text", "") or "").strip()
