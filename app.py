@@ -6,7 +6,7 @@ import streamlit as st
 from google import genai
 
 APP_TITLE = "IndiaMART AI Title Studio"
-MODEL_NAME = "gemini-2.5-flash-lite"
+MODEL_NAME = "gemini-3.5-flash-lite"
 SAMPLES = {
     "Stainless steel water bottle": {
         "product_name": "Mens gents Steel water bottle bottle 1 litre",
